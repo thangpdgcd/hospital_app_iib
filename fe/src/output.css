@@ -1046,7 +1046,7 @@
     justify-self: flex-end;
   }
   .overflow-auto {
-    overflow: auto;
+    overflow: hidden;
   }
   .overflow-clip {
     overflow: clip;

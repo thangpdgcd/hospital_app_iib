@@ -1,0 +1,488 @@
+/* ====== SIDEBAR CHUNG ====== */
+.ant-layout-sider {
+    background: #ffffff !important;
+    border-right: 1px solid #e5e7eb;
+}
+
+.ant-layout-sider-children {
+    background-color: #ffffff;
+    color: #111827;
+}
+
+/* ====== LOGO & HOSPITAL INFO ====== */
+.ms-sider-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 18px;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+.ms-logo-img-wrapper {
+    width: 48px;
+    height: 48px;
+    border-radius: 16px;
+    background: #ecfeff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ms-logo-img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.ms-logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.ms-logo-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #111827;
+}
+
+.ms-logo-subtitle {
+    font-size: 11px;
+    color: #6b7280;
+}
+
+/* ====== USER CARD ====== */
+.ms-sider-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 18px 20px;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+    background: #ffffff;
+}
+
+.ms-user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    background: #14b8a6;
+    /* teal-500 */
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.ms-user-info {
+    display: flex;
+    flex-direction: column;
+    padding: 2px 0;
+}
+
+.ms-user-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: #111827;
+}
+
+.ms-user-role {
+    font-size: 11px;
+    color: #9ca3af;
+}
+
+/* dòng Online: chấm xanh + chữ, có khoảng cách */
+.ms-user-status {
+    font-size: 11px;
+    color: #34d399;
+    display: flex;
+    align-items: center;
+    margin-top: 2px;
+}
+
+.ms-user-status-dot {
+    font-size: 12px;
+    margin-right: 6px;
+}
+
+/* collapsed: logo + user căn giữa */
+.ant-layout-sider-collapsed {
+    .ms-sider-logo {
+        justify-content: center;
+    }
+
+    .ms-sider-user {
+        justify-content: center;
+    }
+}
+
+/* ====== MENU (AntD + className="ms-menu") ====== */
+.ms-menu {
+    background: transparent !important;
+    border-inline-end: none !important;
+}
+
+/* ITEM THƯỜNG */
+.ms-menu .ant-menu-item {
+    position: relative;
+    border-radius: 20px;
+    margin-inline: 3px;
+    margin-block: 6px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    color: #111827;
+    padding-inline: 16px 32px;
+    /* chừa chỗ cho chấm bên phải */
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* icon */
+.ms-menu .ant-menu-item .anticon {
+    font-size: 16px;
+    color: #0f766e;
+}
+
+/* hover – CHƯA chọn */
+.ms-menu .ant-menu-item:not(.ant-menu-item-selected):hover {
+    background: #f3f4f6 !important;
+}
+
+/* ITEM ĐANG CHỌN */
+.ms-menu .ant-menu-item-selected,
+.ms-menu .ant-menu-item-selected:hover {
+    background: linear-gradient(90deg, #e6fffb, #ffffff) !important;
+    color: #0f766e !important;
+    border: none !important;
+    box-shadow:
+        0 6px 18px 0 rgba(6, 182, 212, 0.35),
+        0 0 0 0px rgba(9, 160, 187, 0.4) !important;
+    font-weight: 600;
+}
+
+/* icon khi chọn */
+.ms-menu .ant-menu-item-selected .anticon {
+    color: #0f766e !important;
+}
+
+/* bỏ border-right mặc định của AntD */
+.ms-menu .ant-menu-item::after {
+    border-right: none !important;
+}
+
+/* bỏ outline focus mặc định (chrome) */
+.ms-menu .ant-menu-item:focus-visible {
+    outline: none;
+    box-shadow: none;
+}
+
+/* chấm tròn bên phải của item đang chọn */
+.ms-menu .ant-menu-item-selected::after {
+    content: "";
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 999px;
+    background: #06b6d4;
+    box-shadow: 0 0 0 2px rgba(6, 182, 212, 0.25);
+}
+
+/* ====== HEADER & CONTENT ====== */
+.ant-layout-header {
+    border-bottom: 1px solid #e5e7eb;
+    background: #ffffff;
+}
+
+.ant-layout-content {
+    box-sizing: border-box;
+    background: #f5f8fb;
+    overflow: hidden;
+}
+
+/* ====== SIDER FLEX ĐỂ FOOTER Ở ĐÁY ====== */
+
+/* Sider (component) */
+.ms-sider {
+    height: 100vh;
+}
+
+/* Flex container thực sự cho main + footer */
+.ms-sider>.ant-layout-sider-children {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* phần trên có thể scroll nếu dài */
+.ms-sider-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+    min-height: 0;
+}
+
+/* footer ở đáy sidebar */
+.ms-sider-footer {
+    margin-top: auto;
+    /* ĐẨY XUỐNG ĐÁY */
+    padding: 16px 20px 24px;
+    border-top: 1px solid #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* ====== NÚT SETTINGS + LOGOUT ====== */
+.ms-footer-item {
+    width: 100%;
+    border: none;
+    background: transparent;
+    border-radius: 999px;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    cursor: pointer;
+    color: #374151;
+    transition: background 0.15s ease, color 0.15s ease;
+
+    &:hover {
+        background: #f3f4f6;
+    }
+
+    span {
+        flex: 1;
+        text-align: left;
+    }
+}
+
+/* Settings đang active */
+.ms-footer-item--active {
+    background: #ecfdf5;
+    color: #047857;
+
+    .anticon {
+        color: #047857;
+    }
+
+    &:hover {
+        background: #d1fae5;
+    }
+}
+
+/* Logout */
+.ms-footer-item--logout {
+    color: #b91c1c;
+    /* đỏ cơ bản */
+
+    .anticon {
+        color: #b91c1c;
+    }
+
+    &:hover {
+        background: #fee2e2;
+        color: #991b1b;
+
+        .anticon {
+            color: #991b1b;
+        }
+    }
+}
+.ms-menu-label-with-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.ms-menu-badge {
+    min-width: 18px;
+    padding: 0 6px;
+    height: 18px;
+    border-radius: 999px;
+    background: #f97316;
+    /* cam */
+    color: #ffffff;
+    font-size: 11px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+/* badge màu cam ở menu My Team */
+.ms-menu-item-with-badge {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ms-menu-badge {
+    min-width: 18px;
+    height: 18px;
+    padding: 0 6px;
+    border-radius: 999px;
+    background: #ff7a00;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* khu vực dưới cùng của sider */
+.ms-sider {
+    display: flex;
+    flex-direction: column;
+}
+
+.ms-menu {
+    flex: 1 1 auto;
+}
+
+.ms-sider-bottom {
+    padding: 12px 16px 16px;
+    border-top: 1px solid #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.ms-sider-bottom-item {
+    width: 100%;
+    border: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #4b5563;
+    text-align: left;
+}
+
+.ms-sider-bottom-item:hover {
+    background: #f3f4f6;
+}
+
+.ms-sider-bottom-item--logout {
+    color: #b91c1c;
+}
+/* make sider a column layout */
+.ms-sider {
+    display: flex;
+    flex-direction: column;
+}
+
+/* menu takes all remaining height */
+.ms-menu {
+    flex: 1 1 auto;
+}
+
+/* badge on My Team */
+.ms-menu-item-with-badge {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ms-menu-badge {
+    min-width: 18px;
+    height: 18px;
+    padding: 0 6px;
+    border-radius: 999px;
+    background: #ff7a00;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* bottom section */
+.ms-sider-bottom {
+    padding: 12px 16px 16px;
+    border-top: 1px solid #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.ms-sider-bottom-item {
+    width: 100%;
+    border: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #4b5563;
+    text-align: left;
+}
+
+.ms-sider-bottom-item:hover {
+    background: #f3f4f6;
+}
+
+.ms-sider-bottom-item--logout {
+    color: #b91c1c;
+}
+.ms-menu-item-with-badge {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.ms-menu-badge {
+    min-width: 18px;
+    height: 18px;
+    padding: 0 6px;
+    border-radius: 999px;
+    font-size: 11px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+/* badge cảnh báo màu cam như hình */
+.ms-menu-badge--alert {
+    background: #ff7a1a;
+    color: #ffffff;
+}
+/* mainlayout.scss – thêm/đảm bảo có các class này */
+
+.ms-menu-item-with-badge {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    width: 100%;
+}
+
+.ms-menu-badge {
+    min-width: 20px;
+    padding: 0 6px;
+    height: 20px;
+    border-radius: 999px;
+    background: #fb923c;
+    /* orange */
+    color: #ffffff;
+    font-size: 11px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}

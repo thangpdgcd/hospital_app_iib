@@ -16,12 +16,7 @@ type FakeUser = {
 };
 
 const fakeUsers: FakeUser[] = [
-  {
-    staffId: "SC001",
-    password: "123456",
-    name: "Alex Nguyen",
-    role: "Scheduler",
-  },
+  { staffId: "SC001", password: "123456", name: "Alex Nguyen", role: "Scheduler" },
   { staffId: "DR123", password: "med2025", name: "Dr. Lan", role: "Doctor" },
   { staffId: "NR456", password: "nurse2025", name: "Nurse Hoa", role: "Nurse" },
 ];
@@ -67,31 +62,32 @@ const LoginView: React.FC = () => {
       );
     }
 
-    // chuyển sang màn Home
     navigate("/");
   };
 
   return (
     <div className='login-page'>
-      {/* background blur */}
       <div className='login-bg login-bg--left' />
       <div className='login-bg login-bg--right' />
 
-      {/* card */}
       <div className='login-card'>
-        {/* logo */}
         <div className='login-logo-wrapper'>
           <div className='login-logo-circle'>
             <img src={imgLoginView} alt='MedStaff Logo' />
           </div>
         </div>
 
-        {/* heading */}
         <h1 className='login-title'>MedStaff Portal</h1>
         <p className='login-subtitle'>Hospital Staff Scheduling System</p>
 
-        {/* form */}
-        <div className='login-form'>
+        {/* ===== FORM BẮT ENTER ===== */}
+        <form
+          className='login-form'
+          onSubmit={(e) => {
+            e.preventDefault();
+            handleSignIn();
+          }}
+        >
           {/* Staff ID */}
           <label className='login-field-label' htmlFor='staffId'>
             Staff ID
@@ -123,7 +119,8 @@ const LoginView: React.FC = () => {
             <button
               type='button'
               className='login-eye-btn'
-              onClick={() => setShowPassword((v) => !v)}>
+              onClick={() => setShowPassword((v) => !v)}
+            >
               {showPassword ? "🙈" : "👁"}
             </button>
           </div>
@@ -144,18 +141,19 @@ const LoginView: React.FC = () => {
               className='login-link'
               onClick={() =>
                 alert("Forgot password? Please contact your administrator.")
-              }>
+              }
+            >
               Forgot password?
             </button>
           </div>
 
-          {/* sign in button */}
-          <button type='button' className='login-submit' onClick={handleSignIn}>
+          {/* Sign In */}
+          <button type='submit' className='login-submit'>
             Sign In
           </button>
-        </div>
+        </form>
 
-        {/* demo hint */}
+        {/* demo */}
         <div className='login-demo'>
           <p>Demo Access - Use any credentials to login</p>
           <div className='login-demo-box'>
@@ -169,7 +167,6 @@ const LoginView: React.FC = () => {
         </div>
       </div>
 
-      {/* footer */}
       <p className='login-footer'>
         © 2025 MedStaff Hospital System. All rights reserved.
       </p>

@@ -1,0 +1,1107 @@
+.mr-wrapper {
+    padding: 24px 32px;
+    background: #f5f8fb;
+    min-height: 100vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+}
+
+.mr-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.mr-header-left {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.mr-header-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    background: #e0f7fb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mr-title {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.mr-subtitle {
+    margin: 2px 0 0;
+    font-size: 13px;
+    color: #64748b;
+}
+
+.mr-header-right .mr-pending-chip {
+    border-radius: 999px;
+    border: none;
+    padding: 8px 16px;
+    font-size: 13px;
+    background: #ecfdf5;
+    color: #047857;
+}
+
+/* FILTERS */
+.mr-filters {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 16px;
+    align-items: center;
+}
+
+.mr-search {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 999px;
+    padding: 6px 12px;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+}
+
+.mr-search-icon {
+    margin-right: 8px;
+}
+
+.mr-search input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 13px;
+}
+
+.mr-filter-selects {
+    display: flex;
+    gap: 8px;
+}
+
+.mr-filter-selects select {
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 1px solid #e2e8f0;
+    background: #ffffff;
+    font-size: 13px;
+}
+
+/* CARD LIST */
+.mr-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.mr-card {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 16px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+}
+
+.mr-card-main {
+    display: flex;
+    gap: 12px;
+}
+
+.mr-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: #ffffff;
+
+    &[data-type="shiftChange"] {
+        background: linear-gradient(135deg, #18c0a6, #2de1c2);
+    }
+
+    &[data-type="additionalShift"] {
+        background: linear-gradient(135deg, #2563eb, #4f46e5);
+    }
+
+    &[data-type="dayOff"] {
+        background: linear-gradient(135deg, #ec4899, #a855f7);
+    }
+}
+
+.mr-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.mr-card-name-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.mr-card-name {
+    font-weight: 600;
+    font-size: 14px;
+    color: #0f172a;
+}
+
+.mr-badge-type {
+    border-radius: 999px;
+    padding: 2px 10px;
+    font-size: 11px;
+    border: 1px solid transparent;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Shift Change – xanh mint */
+.mr-badge-type--shiftChange {
+    color: #0f766e;
+    background: #e7fdf7;
+    border-color: #9cf3e4;
+}
+
+/* Additional Shift – xanh dương */
+.mr-badge-type--additionalShift {
+    color: #2563eb;
+    background: #e7f0ff;
+    border-color: #a8c5ff;
+}
+
+/* Day Off – tím hồng */
+.mr-badge-type--dayOff {
+    color: #a855f7;
+    background: #f7e9ff;
+    border-color: #dfb8ff;
+}
+
+.mr-card-role {
+    font-size: 12px;
+    color: #64748b;
+}
+
+.mr-card-summary {
+    font-size: 12px;
+    color: #0f172a;
+}
+
+.mr-card-side {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.mr-card-side-top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+}
+
+.mr-status {
+    border-radius: 999px;
+    padding: 3px 10px;
+    font-size: 11px;
+}
+
+.mr-status--pending {
+    background: #fef9c3;
+    color: #854d0e;
+}
+
+.mr-status--approved {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.mr-status--declined {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.mr-date-label {
+    font-size: 11px;
+    color: #94a3b8;
+}
+
+.mr-view-btn {
+    border-radius: 999px;
+    border: 1px solid #cbd5f5;
+    background: #eff6ff;
+    padding: 4px 10px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/* EMPTY */
+.mr-empty {
+    text-align: center;
+    padding: 32px 0;
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+/* MODAL BASE */
+.mr-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+}
+
+.mr-modal {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(15, 23, 42, 0.35);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.mr-modal-small {
+    width: 420px;
+    padding: 24px 24px 20px;
+}
+
+.mr-modal-large {
+    width: 760px;
+    max-height: 90vh;
+    padding: 0;
+    overflow: hidden;
+}
+
+.mr-modal-close {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* MODAL HEADER VARIANTS */
+.mr-modal-header {
+    padding: 20px 24px 12px;
+}
+
+.mr-modal-header--gradient {
+    padding: 20px 24px 16px;
+    background: linear-gradient(90deg, #e0f9ff, #fdfdfb);
+}
+
+.mr-modal-header--blue {
+    padding: 18px 24px 12px;
+    background: linear-gradient(90deg, #e0f2fe, #eff6ff);
+}
+
+.mr-modal-header--teal {
+    padding: 18px 24px 12px;
+    background: linear-gradient(90deg, #ccfbf1, #ecfeff);
+}
+
+.mr-modal-header--light {
+    padding: 18px 24px 12px;
+    background: linear-gradient(90deg, #e0f9ff, #eef2ff);
+}
+
+.mr-modal-header--dayoff {
+    padding: 18px 24px 12px;
+    background: linear-gradient(90deg, #fce7f3, #f5eafe);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mr-modal-title-main {
+    font-size: 18px;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.mr-modal-sub-title {
+    font-size: 12px;
+    color: #64748b;
+    margin-top: 4px;
+}
+
+.mr-modal-avatar-row {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.mr-modal-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    background: #059669;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.mr-modal-avatar--blue {
+    background: #2563eb;
+}
+
+.mr-modal-avatar--dayoff {
+    background: #ec4899;
+}
+
+.mr-modal-status-pill {
+    align-self: flex-start;
+    margin-top: 8px;
+    border-radius: 999px;
+    padding: 4px 10px;
+    font-size: 11px;
+    background: #fef9c3;
+    color: #854d0e;
+}
+
+/* MODAL BODY + FOOTER */
+.mr-modal-body {
+    padding: 16px 24px 20px;
+    overflow-y: auto;
+}
+
+.mr-modal-footer {
+    padding: 12px 24px 16px;
+    border-top: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: flex-start;
+    gap: 8px;
+}
+
+.mr-modal-footer--right {
+    justify-content: flex-end;
+}
+
+/* Buttons */
+.mr-btn {
+    border-radius: 999px;
+    border: 1px solid transparent;
+    padding: 8px 16px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.mr-btn-sm {
+    padding: 6px 10px;
+    font-size: 12px;
+}
+
+.mr-btn-primary {
+    background: #06b6d4;
+    border-color: #06b6d4;
+    color: #ffffff;
+}
+
+.mr-btn-ghost {
+    background: #ffffff;
+    border-color: #e2e8f0;
+    color: #0f172a;
+}
+
+.mr-btn-danger {
+    background: #ef4444;
+    border-color: #ef4444;
+    color: #ffffff;
+}
+
+/* Shift change layout */
+.mr-two-columns {
+    display: grid;
+    grid-template-columns: 1.5fr 40px 1.5fr;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.mr-shift-box {
+    padding: 10px 12px;
+    border-radius: 14px;
+}
+
+.mr-shift-box--current {
+    background: #fef9c3;
+}
+
+.mr-shift-box--requested {
+    background: #ccfbf1;
+}
+
+.mr-shift-box-label {
+    font-size: 11px;
+    color: #6b7280;
+}
+
+.mr-shift-box-day {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.mr-shift-box-type {
+    font-size: 13px;
+}
+
+.mr-shift-box-time {
+    font-size: 12px;
+    color: #4b5563;
+}
+
+.mr-shift-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+/* Reason block */
+.mr-reason-block {
+    margin-top: 8px;
+}
+
+.mr-reason-label {
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.mr-reason-text {
+    padding: 8px 10px;
+    border-radius: 10px;
+    background: #f9fafb;
+    font-size: 12px;
+    color: #4b5563;
+}
+
+/* Assign replacement prompt */
+.mr-unassigned-box {
+    margin: 12px 0 16px;
+    padding: 10px 12px;
+    border-radius: 14px;
+    background: #fef3c7;
+    font-size: 13px;
+}
+
+.mr-unassigned-day {
+    font-weight: 600;
+}
+
+.mr-unassigned-type,
+.mr-unassigned-time,
+.mr-unassigned-dept {
+    font-size: 12px;
+}
+
+/* Assign replacement list */
+.mr-replacement-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.mr-replacement-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 10px;
+    border-radius: 12px;
+    background: #f9fafb;
+}
+
+.mr-replacement-left {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.mr-replacement-avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 999px;
+    background: #0ea5e9;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.mr-replacement-name {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.mr-replacement-title {
+    font-size: 11px;
+    color: #6b7280;
+}
+
+.mr-replacement-middle {
+    flex: 1;
+    margin: 0 12px;
+    font-size: 11px;
+}
+
+.mr-hours-progress {
+    margin-top: 4px;
+    height: 6px;
+    border-radius: 999px;
+    background: #e5e7eb;
+    overflow: hidden;
+}
+
+.mr-hours-bar {
+    height: 100%;
+    background: #22c55e;
+}
+
+.mr-hours-note {
+    margin-top: 2px;
+    font-size: 11px;
+}
+
+.mr-hours-danger {
+    color: #b91c1c;
+}
+
+.mr-hours-ok {
+    color: #16a34a;
+}
+
+.mr-replacement-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+}
+
+.mr-availability-pill {
+    border-radius: 999px;
+    padding: 2px 8px;
+    font-size: 11px;
+    background: #dcfce7;
+    color: #166534;
+}
+
+/* Manual editor demo */
+.mr-manual-grid {
+    margin-top: 4px;
+    border-radius: 16px;
+    background: #f9fafb;
+    padding: 10px 12px;
+}
+
+.mr-manual-row {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+    font-size: 11px;
+}
+
+.mr-manual-row--header {
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+
+.mr-manual-row--days {
+    margin-bottom: 4px;
+}
+
+.mr-manual-row--shifts {
+    align-items: stretch;
+}
+
+.mr-manual-shift {
+    border-radius: 10px;
+    padding: 6px 4px;
+    font-size: 10px;
+    text-align: center;
+}
+
+.mr-manual-shift--empty {
+    background: transparent;
+    border: 1px dashed #e5e7eb;
+}
+
+.mr-manual-shift--morning {
+    background: #fef9c3;
+}
+
+.mr-manual-shift--evening {
+    background: #a7f3d0;
+}
+
+.mr-manual-shift--night {
+    background: #bfdbfe;
+}
+
+/* Additional shift top */
+.mr-additional-top {
+    display: grid;
+    grid-template-columns: 1.4fr 1.6fr;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.mr-additional-shift-box,
+.mr-additional-hours-box {
+    padding: 10px 12px;
+    border-radius: 14px;
+    background: #f9fafb;
+}
+
+.mr-additional-label {
+    font-size: 11px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.mr-additional-date {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.mr-additional-main {
+    font-size: 12px;
+}
+
+.mr-additional-location {
+    font-size: 12px;
+    color: #6b7280;
+    margin-top: 4px;
+}
+
+.mr-hours-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 11px;
+}
+
+.mr-hours-caption {
+    font-size: 11px;
+    color: #6b7280;
+}
+
+.mr-hours-value {
+    font-size: 12px;
+}
+
+/* DAY OFF sections */
+.mr-dayoff-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.mr-dayoff-balance {
+    display: flex;
+    flex-direction: column;
+    font-size: 11px;
+
+    span {
+        color: #64748b;
+    }
+
+    strong {
+        font-size: 13px;
+        color: #0f172a;
+    }
+}
+
+.mr-dayoff-section {
+    margin-bottom: 12px;
+}
+
+.mr-dayoff-section-title {
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.mr-dayoff-timeoff-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.mr-dayoff-timeoff-item {
+    padding: 8px 10px;
+    border-radius: 12px;
+    background: #f9fafb;
+}
+
+.mr-dayoff-label {
+    font-size: 11px;
+    color: #6b7280;
+}
+
+.mr-dayoff-value {
+    font-size: 12px;
+    margin-top: 2px;
+}
+
+.mr-dayoff-affected-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.mr-dayoff-affected-card {
+    padding: 8px 10px;
+    border-radius: 12px;
+    background: #fef9c3;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+.mr-dayoff-affected-date {
+    font-weight: 600;
+}
+
+.mr-dayoff-affected-shift {
+    font-size: 12px;
+}
+
+.mr-dayoff-affected-time,
+.mr-dayoff-affected-dept {
+    font-size: 12px;
+    text-align: right;
+}
+
+.mr-dayoff-replacement-box {
+    padding: 10px 12px;
+    border-radius: 14px;
+    background: #fffbeb;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    strong {
+        margin-left: 4px;
+    }
+}
+
+/* Toast */
+.mr-toast {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 60;
+}
+
+.mr-toast-content {
+    background: #059669;
+    color: white;
+    padding: 10px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+}
+.mr-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: #ffffff;
+
+    &[data-type="shiftChange"] {
+        background: #06b6d4;
+    }
+
+    &[data-type="additionalShift"] {
+        background: #6366f1;
+    }
+
+    /* NEW: Day Off */
+    &[data-type="dayOff"] {
+        background: #ec4899; // tím hồng giống Figma
+    }
+}
+
+/* badge loại request */
+.mr-badge-type {
+    border-radius: 999px;
+    padding: 2px 8px;
+    font-size: 11px;
+    background: #ecfeff;
+    color: #0e7490;
+}
+
+.mr-badge-type--shiftChange {
+    background: #d1fae5;
+    color: #047857;
+}
+
+.mr-badge-type--additionalShift {
+    background: #eff6ff;
+    color: #1d4ed8;
+}
+
+.mr-badge-type--dayOff {
+    background: #f5e9ff;
+    color: #7c3aed;
+}
+
+/* avatar modal Day Off */
+.mr-modal-avatar--purple {
+    background: #8b5cf6;
+}
+
+/* box balance nghỉ phép */
+.mr-leave-balance {
+    margin-left: auto;
+    text-align: right;
+    font-size: 11px;
+
+    span {
+        display: block;
+        color: #64748b;
+    }
+
+    strong {
+        color: #16a34a;
+        font-size: 14px;
+    }
+}
+
+/* time off block */
+.mr-dayoff-timeoff {
+    margin-bottom: 12px;
+    padding: 10px 12px;
+    border-radius: 14px;
+    background: #f9fafb;
+}
+
+.mr-dayoff-timeoff-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.mr-dayoff-timeoff-col {
+    font-size: 12px;
+}
+
+.mr-dayoff-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: #6b7280;
+    margin-bottom: 2px;
+}
+
+.mr-dayoff-value {
+    font-size: 12px;
+}
+
+/* affected shifts list */
+.mr-dayoff-affected {
+    margin-top: 10px;
+}
+
+.mr-dayoff-affected-list {
+    margin-top: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.mr-dayoff-affected-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 10px;
+    border-radius: 10px;
+    background: #fef9c3;
+    font-size: 12px;
+}
+
+.mr-dayoff-affected-date {
+    font-weight: 600;
+}
+
+.mr-dayoff-affected-meta {
+    font-size: 11px;
+    color: #4b5563;
+}
+
+.mr-dayoff-affected-dept {
+    font-size: 11px;
+    color: #6b7280;
+}
+
+.mr-dayoff-replacement-note {
+    margin-top: 6px;
+    font-size: 11px;
+    border-radius: 10px;
+    padding: 8px 10px;
+    background: #fffbeb;
+    color: #92400e;
+}
+.mr-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: #ffffff;
+
+    &[data-type="shiftChange"] {
+        background: #06b6d4;
+    }
+
+    &[data-type="additionalShift"] {
+        background: #6366f1;
+    }
+
+    /* NEW: Day Off */
+    &[data-type="dayOff"] {
+        background: #ec4899; // tím hồng giống Figma
+    }
+}
+
+/* badge loại request */
+.mr-badge-type {
+    border-radius: 999px;
+    padding: 2px 8px;
+    font-size: 11px;
+    background: #ecfeff;
+    color: #0e7490;
+}
+
+.mr-badge-type--shiftChange {
+    background: #d1fae5;
+    color: #047857;
+}
+
+.mr-badge-type--additionalShift {
+    background: #eff6ff;
+    color: #1d4ed8;
+}
+
+.mr-badge-type--dayOff {
+    background: #f5e9ff;
+    color: #7c3aed;
+}
+
+/* avatar modal Day Off */
+.mr-modal-avatar--purple {
+    background: #8b5cf6;
+}
+
+/* box balance nghỉ phép */
+.mr-leave-balance {
+    margin-left: auto;
+    text-align: right;
+    font-size: 11px;
+
+    span {
+        display: block;
+        color: #64748b;
+    }
+
+    strong {
+        color: #16a34a;
+        font-size: 14px;
+    }
+}
+
+/* time off block */
+.mr-dayoff-timeoff {
+    margin-bottom: 12px;
+    padding: 10px 12px;
+    border-radius: 14px;
+    background: #f9fafb;
+}
+
+.mr-dayoff-timeoff-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.mr-dayoff-timeoff-col {
+    font-size: 12px;
+}
+
+.mr-dayoff-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: #6b7280;
+    margin-bottom: 2px;
+}
+
+.mr-dayoff-value {
+    font-size: 12px;
+}
+
+/* affected shifts list */
+.mr-dayoff-affected {
+    margin-top: 10px;
+}
+
+.mr-dayoff-affected-list {
+    margin-top: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.mr-dayoff-affected-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 10px;
+    border-radius: 10px;
+    background: #fef9c3;
+    font-size: 12px;
+}
+
+.mr-dayoff-affected-date {
+    font-weight: 600;
+}
+
+.mr-dayoff-affected-meta {
+    font-size: 11px;
+    color: #4b5563;
+}
+
+.mr-dayoff-affected-dept {
+    font-size: 11px;
+    color: #6b7280;
+}
+
+.mr-dayoff-replacement-note {
+    margin-top: 6px;
+    font-size: 11px;
+    border-radius: 10px;
+    padding: 8px 10px;
+    background: #fffbeb;
+    color: #92400e;
+}
