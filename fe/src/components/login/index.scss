@@ -1,0 +1,242 @@
+.login-page {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background: radial-gradient(circle at 10% 10%, #d9fdf7 0, #f8fafb 35%),
+    radial-gradient(circle at 90% 80%, #d5f4ff 0, #f8fafb 40%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  color: #1d293d;
+}
+
+.login-bg {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(80px);
+  opacity: 0.25;
+  z-index: 0;
+}
+
+.login-bg--left {
+  width: 260px;
+  height: 260px;
+  background: #00d5be;
+  left: 80px;
+  top: 80px;
+}
+
+.login-bg--right {
+  width: 360px;
+  height: 360px;
+  background: #00d3f3;
+  right: 80px;
+  bottom: 80px;
+}
+
+.login-card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 460px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.25);
+  border: 1px solid #e5e7eb;
+  padding: 32px 32px 24px;
+  text-align: center;
+}
+
+/* logo */
+
+.login-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.login-logo-circle {
+  width: 72px;
+  height: 72px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.12);
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-logo-circle img {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  object-fit: contain;
+}
+
+/* heading */
+
+.login-title {
+  margin: 4px 0 2px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #1d293d;
+}
+
+.login-subtitle {
+  margin: 0 0 20px;
+  font-size: 14px;
+  color: #62748e;
+}
+
+/* form */
+
+.login-form {
+  text-align: left;
+}
+
+.login-field-label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13px;
+  color: #314158;
+}
+
+.login-field {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  padding: 0 12px 0 38px;
+  height: 48px;
+  margin-bottom: 14px;
+  box-sizing: border-box;
+}
+
+.login-field input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  color: #1f2933;
+  background: transparent;
+}
+
+.login-field input::placeholder {
+  color: #9ca3af;
+}
+
+.login-field-icon {
+  position: absolute;
+  left: 12px;
+  font-size: 16px;
+  color: #90a1b9;
+}
+
+.login-eye-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 8px;
+}
+
+/* remember + forgot */
+
+.login-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  font-size: 14px;
+}
+
+.login-remember {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #45556c;
+}
+
+.login-remember input {
+  cursor: pointer;
+}
+
+.login-link {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #009689;
+  font-size: 14px;
+  padding: 0;
+}
+
+/* button */
+
+.login-submit {
+  width: 100%;
+  height: 48px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(90deg, #00bba7, #0092b8);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 10px 15px -3px #96f7e4, 0 4px 6px -4px #96f7e4;
+  margin-bottom: 18px;
+}
+
+/* demo hint */
+
+.login-demo {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 16px;
+  margin-top: 4px;
+  font-size: 12px;
+  color: #62748e;
+}
+
+.login-demo-box {
+  margin-top: 8px;
+  background: #f9fafb;
+  border-radius: 12px;
+  padding: 10px 12px;
+  text-align: left;
+  color: #45556c;
+}
+
+.login-demo-box p {
+  margin: 0;
+}
+
+/* footer */
+
+.login-footer {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: #62748e;
+  text-align: center;
+}
+
+/* responsive */
+
+@media (max-width: 640px) {
+  .login-card {
+    padding: 24px 20px 18px;
+  }
+
+  .login-footer {
+    bottom: 8px;
+    width: 100%;
+    padding: 0 16px;
+  }
+}

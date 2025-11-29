@@ -1,0 +1,82 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+/* mặc định: light */
+body.medstaff-theme-light {
+  background: #f5f8fb;
+  color: #0f172a;
+}
+
+/* dark mode */
+body.medstaff-theme-dark {
+  background: #020617; /* gần như đen */
+  color: #e5e7eb;
+}
+
+/* nền chính + sidebar + cards trong dark */
+body.medstaff-theme-dark .myteam-layout {
+  background: #020617;
+}
+
+body.medstaff-theme-dark .myteam-sidebar,
+body.medstaff-theme-dark .myteam-header {
+  background: #020617;
+  border-color: #1e293b;
+}
+
+body.medstaff-theme-dark .section,
+body.medstaff-theme-dark .summary-card,
+body.medstaff-theme-dark .settings-card {
+  background: #020617;
+  border-color: #1e293b;
+  box-shadow: none;
+}
+
+body.medstaff-theme-dark .header-title,
+body.medstaff-theme-dark .settings-title {
+  color: #e5e7eb;
+}
+
+body.medstaff-theme-dark .header-subtitle,
+body.medstaff-theme-dark .settings-subtitle {
+  color: #9ca3af;
+}

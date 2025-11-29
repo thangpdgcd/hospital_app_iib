@@ -1,0 +1,168 @@
+.settings-page {
+  /* myteam-content bên ngoài đã có padding rồi,
+     nên ở đây chỉ cần margin-top nhẹ */
+  margin-top: 8px;
+}
+
+.settings-header {
+  margin-bottom: 24px;
+}
+
+.settings-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.settings-subtitle {
+  margin-top: 4px;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.settings-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ===== CARD CHUNG ===== */
+
+.settings-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px;
+  border-radius: 24px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.05);
+}
+
+.settings-card-main {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.settings-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.settings-icon--teal {
+  background: linear-gradient(135deg, #14b8a6, #0ea5e9);
+}
+
+.settings-icon--purple {
+  background: linear-gradient(135deg, #8b5cf6, #ec4899);
+}
+
+.settings-card-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.settings-card-desc {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 2px;
+}
+
+.settings-card-meta {
+  margin-top: 8px;
+  font-size: 12px;
+}
+
+.settings-card-meta-label {
+  color: #6b7280;
+  margin-right: 4px;
+}
+
+.settings-card-meta-value {
+  color: #0f766e;
+  font-weight: 500;
+}
+
+.settings-card-chevron {
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  color: #9ca3af;
+  cursor: pointer;
+}
+
+/* ===== APPEARANCE OPTIONS ===== */
+
+.settings-appearance-options {
+  display: flex;
+  gap: 16px;
+  margin-left: 32px;
+}
+
+.appearance-option {
+  width: 230px;
+  max-width: 40vw;
+  padding: 18px 16px;
+  border-radius: 20px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  transition: border 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+}
+
+.appearance-option--active {
+  background: #ecfdf5;
+  border-color: #14b8a6;
+  box-shadow: 0 10px 26px rgba(13, 148, 136, 0.25);
+}
+
+.appearance-icon {
+  font-size: 20px;
+}
+
+.appearance-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #047857;
+}
+
+.appearance-option:not(.appearance-option--active) .appearance-label {
+  color: #4b5563;
+}
+
+.appearance-check {
+  width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  background: #14b8a6;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+}
+
+/* mobile */
+@media (max-width: 960px) {
+  .settings-appearance-options {
+    flex-direction: column;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .appearance-option {
+    width: 100%;
+  }
+}
